@@ -17,6 +17,18 @@ class TasksController < ApplicationController
     end
   end
 
+  def edit
+    @task = Task.find(params[:id])
+  end
+
+  def update
+    if @task = Task.update(task_params)
+      redirect_to tasts_path
+    else
+      render :edit
+    end
+  end
+
 
   private
 
