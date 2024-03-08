@@ -11,7 +11,7 @@ class TasksController < ApplicationController
   def create
     @task = Task.new(task_params)
     if @task.save
-      redirect_to tasks_path
+      redirect_to tasks_path, notice: "You have created task successfully."
     else
       render :new
     end
@@ -27,7 +27,7 @@ class TasksController < ApplicationController
 
   def update
     if @task = Task.update(task_params)
-      redirect_to tasts_path
+      redirect_to tasts_path, notice: "You have updated task successfully."
     else
       render :edit
     end
@@ -36,7 +36,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    redirect_to tasks_path
+    redirect_to tasks_path, notice: "You have deleted task successfully."
   end
 
 
