@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
 
+  root to: 'tasks#index'
+
   get 'homes/top'
   get 'homes/about'
-  root to: 'tasks#index'
 
   devise_for :users
 
