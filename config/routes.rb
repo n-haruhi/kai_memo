@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'genres/new'
+  get 'genres/index'
+  get 'genres/edit'
   root to: 'homes#top'
 
   get 'homes/top'
