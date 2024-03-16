@@ -1,6 +1,6 @@
 <div class="container">
   <div class="col">
-    <table class="table">
+    <table class="table bg-light">
       <thead>
         <tr>
           <th>タスク名</th>
@@ -11,7 +11,7 @@
         <% @tasks.each do |task| %>
           <tr>
             <td><%= task.title %></td>
-            <td>
+            <td class="text-right">
               <%= link_to '詳細', task_path(task), class: "btn btn-sm btn-outline-info" %>
               <%= link_to '編集', edit_task_path(task), class: "btn btn-sm btn-outline-secondary" %>
               <%= link_to '削除', task_path(task), method: :delete, class: "btn btn-sm btn-outline-danger" %>
@@ -20,6 +20,5 @@
         <% end %>
       </tbody>
     </table>
-    <%= link_to '追加', new_task_path, class: "btn btn-sm btn-outline-success" %>
   </div>
 </div>

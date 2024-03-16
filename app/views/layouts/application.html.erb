@@ -11,18 +11,16 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <header>
-      <%= render "layouts/header" %>
-    </header>
+  <body style="background: #E3E7F1;">
+    <%= render "layouts/header" %>
     <main>
       <div class="container">
         <p id="notice"><%= notice %></p>
       </div>
       <%= yield %>
     </main>
-    <footer>
-
+    <footer class="text-white fixed-bottom pt-3 pb-2" style="background: #748DA6;">
+      <p class="d-flex justify-content-center text-white" style="font-size:15px;">© 2024 N</p>
     </footer>
   </body>
 </html>

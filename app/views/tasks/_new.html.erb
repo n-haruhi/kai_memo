@@ -1,6 +1,7 @@
 <div class="container">
   <div class="col">
     <%= form_with model: task, local: true do |f| %>
+      <%= render 'layouts/errors', obj: task %>
 
       <div class="form-group">
         <%= f.label :title %>

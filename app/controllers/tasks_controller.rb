@@ -15,7 +15,8 @@ class TasksController < ApplicationController
     if @task.save
       redirect_to tasks_path, notice: "You have created task successfully."
     else
-      render :new
+      @tasks = Task.all
+      render :index
     end
   end
 
