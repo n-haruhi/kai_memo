@@ -14,6 +14,10 @@
             <% end %>
           </li>
           <li>
+            <%= link_to user_path(current_user), class: 'nav-link text-white' do %>
+              <i class="fa-solid fa-user"></i> MyPage
+            <% end %>
+          </li>
             <%= link_to destroy_user_session_path, method: :delete, class: 'nav-link text-light' do %>
               <i class="fas fa-sign-out-alt"></i> Log out
             <% end %>

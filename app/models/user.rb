@@ -8,4 +8,11 @@ class User < ApplicationRecord
 
   has_one_attached :profile_image
 
+  validates :name, presence: true, uniqueness: true, length: { in: 2..20 }
+  validates :email, presence: true, uniqueness: true
+
+  def get_profile_image
+    (profile_image.attached?)? profile_image: 'no_image.jpg'
+  end
+
 end
