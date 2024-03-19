@@ -8,6 +8,11 @@
         <%= f.text_field :title, class: 'form-control task_title' %>
       </div>
       <div class="form-group">
+        <%= f.label :image %><br>
+        <%= f.file_field :task_image, accept: "image/*", class: "form-control-file task_image" %>
+      </div>
+
+      <div class="form-group">
         <%= f.submit class: 'btn btn-sm btn-outline-success' %>
       </div>
 

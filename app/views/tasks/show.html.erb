@@ -5,6 +5,7 @@
     <table class="table">
       <tr>
         <td><%= @task.title %></td>
+        <td><%= image_tag @task.get_task_image, size: '100x100' %></td>
         <td>
           <%= link_to '編集', edit_task_path, class: "btn btn-sm btn-outline-secondary" %>
           <%= link_to '削除', @task, method: :delete, data: { confirm: '本当に消しますか？' }, class: "btn btn-sm btn-outline-danger"%>

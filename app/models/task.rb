@@ -7,4 +7,8 @@ class Task < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
 
+  def get_task_image
+    (task_image.attached?)? task_image: 'no_image.jpg'
+  end
+
 end
