@@ -9,7 +9,7 @@ Rails.application.routes.draw do
 
   resources :tasks, only: [:index, :new, :create, :show, :edit, :update, :destroy]
   resources :users, only: [:show, :edit, :update]
-  resources :genres, only: [:index, :new]
+  resources :genres, only: [:index, :new, :create, :edit, :update, :destroy]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
