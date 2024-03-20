@@ -4,11 +4,15 @@
       <%= render 'layouts/errors', obj: task %>
 
       <div class="form-group">
-        <%= f.label :title %>
+        <%= f.label :title, "タイトル" %>
         <%= f.text_field :title, class: 'form-control task_title' %>
       </div>
       <div class="form-group">
-        <%= f.label :image %><br>
+        <%= f.label :memo, "メモ" %>
+        <%= f.text_area :memo, class: 'form-control task_memo' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :image, "画像" %><br>
         <%= f.file_field :task_image, accept: "image/*", class: "form-control-file task_image" %>
       </div>
 
