@@ -22,8 +22,8 @@ class GenresController < ApplicationController
   end
 
   def update
-    if @genre.update(genre_params)
-      redirect_to admin_genres_path, notice: "You have updated genre successfully."
+    if @genre = Genre.update(genre_params)
+      redirect_to genres_path, notice: "You have updated genre successfully."
     else
       render :edit
     end
@@ -38,7 +38,7 @@ class GenresController < ApplicationController
   private
 
   def genre_params
-    params.require(:genre).permit(:name, :is_active)
+    params.require(:genre).permit(:name)
   end
 
 end
