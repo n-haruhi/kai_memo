@@ -2,6 +2,7 @@
   <div class="col">
     <h3>タスク編集</h3>
     <%= form_with model: @task, local: true do |f| %>
+      <%= render 'layouts/errors', obj: task %>
 
       <div class="form-group">
         <%= f.label :title %>
@@ -10,6 +11,10 @@
       <div class="form-group">
         <%= f.label :memo, "メモ" %>
         <%= f.text_area :memo, class: 'form-control task_memo' %>
+      </div>
+      <div class="form-group">
+        <%= f.label :genre_id, "ジャンル" %></td>
+        <div class="select_field"><%= f.collection_select :genre_id, Genre.all, :id, :name %></div>
       </div>
       <div class="form-group">
         <%= f.label :image, "画像" %><br>
