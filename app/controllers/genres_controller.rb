@@ -28,9 +28,9 @@ class GenresController < ApplicationController
   end
 
   def destroy
-    @task = Task.find(params[:id])
-    @task.destroy
-    redirect_to tasks_path, notice: "You have deleted genre successfully."
+    @genre = Genre.find(params[:id])
+    @genre.destroy
+    redirect_to genres_path, notice: "You have deleted genre successfully."
   end
 
   private
