@@ -42,6 +42,10 @@ class TasksController < ApplicationController
     redirect_to tasks_path, notice: "You have deleted task successfully."
   end
 
+  def destroy_all
+    #current_user.tasks.destroy_all
+    #redirect_to tasks_path
+  end
 
   private
 
