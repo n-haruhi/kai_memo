@@ -1,4 +1,6 @@
-<%= link_to "カートを空にする", destroy_all_tasks_path, method: :delete, "data-confirm" => "カートを空にします。よろしいでしょうか？", class: "btn btn-danger" %>
+<div class='text-right mb-2'>
+  <%= link_to "全て削除", destroy_all_tasks_path, method: :delete, "data-confirm" => "全て削除します。本当によろしいですか。", class: "btn btn-sm btn-outline-danger" %>
+</div>
 <table class="table bg-light">
   <thead>
     <tr>
