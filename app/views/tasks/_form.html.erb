@@ -11,9 +11,12 @@
       <%= f.text_area :memo, rows: 5, class: 'form-control task_memo' %>
     </div>
     <div class="form-group">
-      <%= f.label :image, "画像" %><br>
-      <%= f.file_field :task_image, accept: "image/*", class: "form-control-file task_image" %>
+      <%= f.label :image, "画像" %>
+      <div class="image_field">
+        <span class="btn btn-file btn-light"><%= f.file_field :task_image,  accept: 'image/*', class: 'form-control-file task_image' %></span>
+      </div>
     </div>
+
 
     <div class="form-group">
       <%= f.submit class: 'btn btn-sm btn-outline-success' %>
